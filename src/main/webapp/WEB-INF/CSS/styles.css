@@ -1,0 +1,744 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(ramu.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	min-width: 10%;
+	min-height: 100%;
+	background-attachment: fixed;
+}
+.rowOpen{
+    background-color:#FFFF94;
+}
+.rowUns{
+    background-color:#ffffff;
+}
+#cssmenu {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,2c539e+100;Blue+3D+%232 */
+	background: rgb(44, 83, 158); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(44,
+		83, 158, 1)), color-stop(100%, rgba(44, 83, 158, 1)));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e',
+		endColorstr='#2c539e', GradientType=0); /* IE6-9 */
+	width: auto;
+}
+
+#cssmenu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	display: block;
+	zoom: 1;
+}
+
+#cssmenu ul:after {
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#cssmenu ul li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+#cssmenu.align-right ul li {
+	float: right;
+}
+
+#cssmenu.align-center ul {
+	text-align: center;
+}
+
+#cssmenu ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+	padding: 15px 25px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+	position: relative;
+	-webkit-transition: color .25s;
+	-moz-transition: color .25s;
+	-ms-transition: color .25s;
+	-o-transition: color .25s;
+	transition: color .25s;
+}
+
+/* #cssmenu ul li a:hover {
+  color: #ffffff;
+} */
+#cssmenu ul li a:hover:before {
+	width: 100%;
+}
+
+#cssmenu ul li a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: -3px;
+	top: 19px;
+	height: 6px;
+	width: 6px;
+	background: #ffffff;
+	opacity: .5;
+}
+
+#cssmenu ul li a:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 0;
+	background: #CEF6CE; /*Color of underline on hover*/
+	-webkit-transition: width .25s;
+	-moz-transition: width .25s;
+	-ms-transition: width .25s;
+	-o-transition: width .25s;
+	transition: width .25s;
+}
+
+#cssmenu ul li.last>a:after, #cssmenu ul li:last-child>a:after {
+	display: none;
+}
+
+#cssmenu ul li.active a:before {
+	width: 100%;
+}
+
+#cssmenu.align-right li.last>a:after, #cssmenu.align-right li:last-child>a:after
+	{
+	display: block;
+}
+
+#cssmenu.align-right li:first-child a:after {
+	display: none;
+}
+
+#cssmenu ul li:last-child {
+	float: right;
+}
+
+@media screen and (max-width: 768px) {
+	#cssmenu ul li {
+		float: none;
+		display: block;
+	}
+	#cssmenu ul li a {
+		width: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		border-bottom: 1px solid #fb998c;
+	}
+	#cssmenu ul li.last>a, #cssmenu ul li:last-child>a {
+		border: 0;
+	}
+	#cssmenu ul li a:after {
+		display: none;
+	}
+	#cssmenu ul li a:before {
+		display: none;
+	}
+}
+#table-scroll {
+    height:250px;
+    overflow:auto;  
+    margin-top:20px;
+}
+.CSSdiv {
+	margin: 0%;
+	padding: 0%;
+	width: 100%;
+	position: relative;
+}
+.CSSOTable {
+	margin: 2%;
+	padding: 0%;
+	width: 96%;
+	border: 1px solid #000000;
+	position: relative;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+	
+}
+
+.CSSOTable table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.CSSOTable tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.CSSOTable table tr:first-child td:first-child {
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.CSSOTable table tr:first-child td:last-child {
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.CSSOTable tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.CSSOTable td {
+	vertical-align: middle;
+
+
+	border: 1px solid #000000;
+	border-width: 0px 1px 1px 0px;
+	text-align: center;
+	padding: 7px;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: normal;
+	color: #000000;
+}
+
+.CSSOTable tr:last-child td {
+	border-width: 0px 1px 0px 0px;
+}
+
+.CSSOTable tr td:last-child {
+	border-width: 0px 0px 1px 0px;
+}
+
+.CSSOTable tr:last-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.CSSOTable caption {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,2c539e+100;Blue+3D+%232 */
+	background: rgb(44, 83, 158); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(44,
+		83, 158, 1)), color-stop(100%, rgba(44, 83, 158, 1)));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e',
+		endColorstr='#2c539e', GradientType=0); /* IE6-9 */
+	font-size: 24px;
+	font-family: Helvetica;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	padding: 1%;
+	border-bottom: 1px solid #000000;
+}
+/*Proxy for table header*/
+
+.CSSOTable th {
+	/* Color of table header */
+	background: rgb(242, 245, 246); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(242,
+		245, 246, 1)), color-stop(37%, rgba(227, 234, 237, 1)),
+		color-stop(100%, rgba(200, 216, 220, 1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6',
+		endColorstr='#c8d8dc', GradientType=0); /* IE6-9 */
+	background-color: #005fbf;
+	border: 0px solid #000000;
+	text-align: center;
+	border-width: 0px 0px 1px 1px;
+	font-size: 16px;
+	font-family: Helvetica;
+	color: #000000;
+	cursor: pointer;
+}
+
+
+
+
+.CSSOTable th:first-child {
+	border-width: 0px 0px 1px 0px;
+}
+
+.CSSOTable th:last-child {
+	border-width: 0px 0px 1px 1px;
+}
+
+/* Table Styles */
+.CSSTable {
+	margin: 2%;
+	padding: 0%;
+	width: 96%;
+	border: 1px solid #000000;
+	position: relative;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+	
+}
+
+.CSSTable table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.CSSTable tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.CSSTable table tr:first-child td:first-child {
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.CSSTable table tr:first-child td:last-child {
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.CSSTable tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.CSSTable tr:hover td {
+	background-color: #ffffff;
+}
+
+.CSSTable td {
+	vertical-align: middle;
+  background-color:#ffffff;
+
+	border: 1px solid #000000;
+	border-width: 0px 1px 1px 0px;
+	text-align: center;
+	padding: 7px;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-weight: normal;
+	color: #000000;
+}
+
+.CSSTable tr:last-child td {
+	border-width: 0px 1px 0px 0px;
+}
+
+.CSSTable tr td:last-child {
+	border-width: 0px 0px 1px 0px;
+}
+
+.CSSTable tr:last-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.CSSTable caption {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2c539e+0,2c539e+100;Blue+3D+%232 */
+	background: rgb(44, 83, 158); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(44,
+		83, 158, 1)), color-stop(100%, rgba(44, 83, 158, 1)));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(44, 83, 158, 1) 0%,
+		rgba(44, 83, 158, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e',
+		endColorstr='#2c539e', GradientType=0); /* IE6-9 */
+	font-size: 24px;
+	font-family: Helvetica;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left;
+	padding: 1%;
+	border-bottom: 1px solid #000000;
+}
+/*Proxy for table header*/
+
+.CSSTable th {
+	/* Color of table header */
+	background: rgb(242, 245, 246); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(242,
+		245, 246, 1)), color-stop(37%, rgba(227, 234, 237, 1)),
+		color-stop(100%, rgba(200, 216, 220, 1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(242, 245, 246, 1) 0%,
+		rgba(227, 234, 237, 1) 37%, rgba(200, 216, 220, 1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6',
+		endColorstr='#c8d8dc', GradientType=0); /* IE6-9 */
+	background-color: #005fbf;
+	border: 0px solid #000000;
+	text-align: center;
+	border-width: 0px 0px 1px 1px;
+	font-size: 16px;
+	font-family: Helvetica;
+	color: #000000;
+	cursor: pointer;
+}
+
+
+
+
+.CSSTable th:first-child {
+	border-width: 0px 0px 1px 0px;
+}
+
+.CSSTable th:last-child {
+	border-width: 0px 0px 1px 1px;
+}
+
+
+/*Button */
+.button {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 7px 7px;
+	border: 1px solid #074276;
+	border-radius: 2px;
+	background: #0d7dde;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0d7dde),
+		to(#10548f));
+	background: -moz-linear-gradient(top, #0d7dde, #10548f);
+	background: linear-gradient(to bottom, #0d7dde, #10548f);
+	font: normal normal normal 14px arial;
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	left: 25px
+}
+
+.button:hover, .button:focus {
+	border: 1px solid##084e8b;
+	background: #1096ff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#1096ff),
+		to(#1365ac));
+	background: -moz-linear-gradient(top, #1096ff, #1365ac);
+	background: linear-gradient(to bottom, #1096ff, #1365ac);
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button:active {
+	background: #074276;
+	background: -webkit-gradient(linear, left top, left bottom, from(#074276),
+		to(#10548f));
+	background: -moz-linear-gradient(top, #074276, #10548f);
+	background: linear-gradient(to bottom, #074276, #10548f);
+}
+
+.buttontable {
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 7px 7px;
+	border: 1px solid #074276;
+	border-radius: 2px;
+	background: #0d7dde;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0d7dde),
+		to(#10548f));
+	background: -moz-linear-gradient(top, #0d7dde, #10548f);
+	background: linear-gradient(to bottom, #0d7dde, #10548f);
+	font: normal normal normal 12px arial;
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	left: 5px
+}
+
+.buttontable:hover, .buttontable:focus {
+	border: 1px solid##084e8b;
+	background: #1096ff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#1096ff),
+		to(#1365ac));
+	background: -moz-linear-gradient(top, #1096ff, #1365ac);
+	background: linear-gradient(to bottom, #1096ff, #1365ac);
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+}
+
+.buttontable:active {
+	background: #074276;
+	background: -webkit-gradient(linear, left top, left bottom, from(#074276),
+		to(#10548f));
+	background: -moz-linear-gradient(top, #074276, #10548f);
+	background: linear-gradient(to bottom, #074276, #10548f);
+}
+
+#cssbutton ul {
+	list-style: none;
+	/*margin: 0;*/
+	padding: 0;
+	line-height: 1;
+	display: block;
+	zoom: 1;
+}
+
+#cssbutton ul li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+/* Tabs */
+.tabs {
+	width: 100%;
+	display: inline-block;
+	margin-left: 500px auto 0;
+}
+
+.tab-links:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.tab-links li {
+	margin: 0px 5px;
+	float: left;
+	list-style: none;
+}
+
+.tab-links a {
+	padding: 9px 15px;
+	display: inline-block;
+	border-radius: 3px 3px 0px 0px;
+	background: #7FB5DA;
+	font-size: 16px;
+	font-weight: 600;
+	color: #4c4c4c;
+	transition: all linear 0.15s;
+	align: center;
+}
+.txt {
+	border: 1px solid #DADADA;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 35px;
+	width: 310px;
+	height: 30px;
+	font-size: 14px;
+	box-shadow: 0 0 10px;
+	-webkit-box-shadow: 0 0 10px;
+	/* For I.E */
+	-moz-box-shadow: 0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/* For I.E */
+	-moz-border-radius: 5px /* For Mozilla Web Browser */
+}
+.tab-links a:hover {
+	background: #a7cce5;
+	text-decoration: none;
+}
+
+li.active a, li.active a:hover {
+	background: #fff;
+	color: #4c4c4c;
+}
+
+/*Form*/
+div#first {
+	width: 350px;
+	height: auto;
+	margin: 50px auto 0;
+	padding: 50px;
+	background-color: #EEE;
+	color: #333;
+	border: 2px solid #C2D6FF;
+	border-radius: 40px 0 40px 0
+}
+
+label {
+	font-size: 15px;
+	font-weight: 700
+}
+
+#txt {
+	border: 1px solid #DADADA;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 35px;
+	width: 310px;
+	height: 30px;
+	font-size: 14px;
+	box-shadow: 0 0 10px;
+	-webkit-box-shadow: 0 0 10px;
+	/* For I.E */
+	-moz-box-shadow: 0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/* For I.E */
+	-moz-border-radius: 5px /* For Mozilla Web Browser */
+}
+
+input#submit {
+	background-color: #cc7a66;
+	border-radius: 5px;
+	border: none;
+	padding: 10px 25px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #949494;
+	margin-left: 120px
+}
+
+input#submit:hover {
+	background-color: #FF9980
+}
+
+
+
+
+
+
+
+
+.autocomplete-suggestions {
+	border: 1px solid #999;
+	background: #FFF;
+	overflow: auto;
+}
+
+.autocomplete-suggestion {
+	padding: 5px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 22px
+}
+
+.autocomplete-selected {
+	background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+	font-weight: bold;
+	color: #3399FF;
+}
+
+
+
+
+.suggest-holder {
+	width: 150px;
+}
+
+.suggest-holder input {
+	width: 146px;
+	border: 1px solid rgba(0, 120, 0, .6);
+}
+
+.suggest-holder ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid rgba(0, 120, 0, .6);
+	margin-top: -6px;
+}
+
+.suggest-holder li {
+	padding: 5px;
+}
+
+.suggest-holder li:hover {
+	cursor: pointer;
+}
+
+.suggest-holder li:hover, li.active {
+	background: rgba(0, 120, 0, .2);
+}
+
