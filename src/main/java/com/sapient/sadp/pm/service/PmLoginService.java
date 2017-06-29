@@ -65,5 +65,11 @@ public class PmLoginService {
         // TODO Auto-generated method stub
         return pmDao.findByUsername(username);
     }
+
+    @Transactional
+	public PM getpmbyID(Long pmId) {
+		// TODO Auto-generated method stub
+		return pmDao.findById(pmId);
+	}
     
 }

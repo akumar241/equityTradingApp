@@ -31,8 +31,15 @@ public class PM extends User {
 
     public PM() {
     }
+    
+    
 
-    public PM(String name, String email, String password, String username, String contactNo)
+    public PM(Long id) {
+		super();
+		this.Id = id;
+	}
+
+	public PM(String name, String email, String password, String username, String contactNo)
             throws InvalidArgumentException {
         super(name, email, password, username, contactNo);
     }

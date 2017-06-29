@@ -47,6 +47,7 @@ public class PortfolioService {
 	 * @param  id
 	 * @return portfolio
 	 */
+    @Transactional
 	public Portfolio getPortfolioById(Long id)
 	{
 	    return portfolioDao.findById(id);

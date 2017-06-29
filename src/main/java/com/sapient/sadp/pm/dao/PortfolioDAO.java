@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sapient.sadp.pm.model.PM;
 import com.sapient.sadp.pm.model.Portfolio;
 
 // TODO: Auto-generated Javadoc
@@ -37,7 +38,7 @@ public class PortfolioDAO  {
     public Iterable<Portfolio> getAllPortfoliosByPMId(Long PMId) {        
         Session session = this.sessionFactory.getCurrentSession();
 		Criteria criteria = session.createCriteria(Portfolio.class);
-		criteria.add(Restrictions.eq("pm", PMId));
+		criteria.add(Restrictions.eq("pm", new PM(PMId)));
         List<Portfolio> portfolios = criteria.list();
         return portfolios;
     }
@@ -61,7 +62,7 @@ public class PortfolioDAO  {
      * @param Portfolio id
      * @return portfolio
      */
-    
+    @Transactional
     public Portfolio findById(long id) {
     	Session session = this.sessionFactory.getCurrentSession();
         Portfolio portfolio = (Portfolio) session.load(Portfolio.class, id);

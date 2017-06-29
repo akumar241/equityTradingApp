@@ -70,33 +70,35 @@ public class Portfolio {
     }
 
 
-    public void setPortfolioName(String portfolioName) {
-        this.portfolioName = portfolioName;
-    }
-
-
-    public void setPm(PM pm) {
-        this.pm = pm;
-    }
-
-
     /**
      * Gets the portfolio name.
      *
      * @return the portfolio name
      */
     public String getPortfolioName() {
-        return portfolioName;
+    	return portfolioName;
+    	
+    }
+    public void setPortfolioName(String portfolioName) {
+        this.portfolioName = portfolioName;
     }
 
+
+    
     /**
      * Gets the pm.
      *
      * @return the pm
      */
     public PM getPm() {
-        return pm;
+    	return pm;
     }
+    
+    public void setPm(PM pm) {
+        this.pm = pm;
+    }
+
+
 
     /**
      * Gets the holdings.

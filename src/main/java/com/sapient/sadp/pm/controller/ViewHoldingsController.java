@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.sapient.sadp.pm.model.Holdings;
 import com.sapient.sadp.pm.model.Order;
 import com.sapient.sadp.pm.model.Portfolio;
+import com.sapient.sadp.pm.service.PortfolioService;
 
 @Controller
 public class ViewHoldingsController {
-    /*@Autowired
-    public PortfolioManager pm;
-
     @Autowired
+    public PortfolioService portfolioService;
+
+    /* @Autowired
     public HoldingsManager holdingManager;
     @Autowired
     SecurityTimer securityTimer;
@@ -35,8 +37,7 @@ public class ViewHoldingsController {
         // Database was not generating values so it is just a hack.
         portfolio1.setPortfolioId(0L);
         order.setPortfolio(portfolio1);
-        Iterable<Portfolio> portfolioList = Collections.EMPTY_LIST;
-        //pm.getAllPortfoliosByPMId((Long) session.getAttribute("pm_id"));
+        Iterable<Portfolio> portfolioList = portfolioService.getAllPortfoliosByPMId((Long) session.getAttribute("pm_id"));
         model.addAttribute("order", order);
         model.addAttribute("portfolio", portfolioList);
 
